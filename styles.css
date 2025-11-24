@@ -80,6 +80,10 @@ img {
     color: #fff;
 }
 
+.hero--compact {
+    min-height: 360px;
+}
+
 .hero__overlay {
     position: absolute;
     inset: 0;
@@ -323,6 +327,110 @@ img {
 .cta-panel p {
     margin: 0;
     max-width: 640px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.contact-card {
+    background: #fff;
+    border: 1px solid rgba(27, 21, 52, 0.1);
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 12px;
+}
+
+.contact-card h2 {
+    margin: 0;
+    color: var(--primary);
+}
+
+.contact-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.contact-list li {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.contact-list span {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.contact-list a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.contact-note {
+    padding: 12px 14px;
+    background: #f7f8ff;
+    border-radius: 12px;
+    color: var(--text);
+    border: 1px solid rgba(27, 21, 52, 0.08);
+}
+
+.contact-form {
+    background: #fff;
+    border: 1px solid rgba(27, 21, 52, 0.1);
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form h2 {
+    margin: 0;
+    color: var(--primary);
+}
+
+.contact-form form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(27, 21, 52, 0.14);
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid rgba(12, 101, 255, 0.35);
 }
 
 /* FOOTER */
