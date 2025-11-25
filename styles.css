@@ -264,10 +264,16 @@ img {
     max-width: 760px;
 }
 
+
 .detail__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 18px;
+}
+
+.detail__stack {
+    display: grid;
+    gap: 16px;
 }
 
 .detail-card {
@@ -278,6 +284,34 @@ img {
     box-shadow: var(--shadow);
     display: grid;
     gap: 10px;
+}
+
+.detail-card--wide {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.detail-card__header {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.detail-card__badge {
+    background: #eef3ff;
+    color: var(--primary);
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-weight: 700;
+    min-width: 36px;
+    text-align: center;
+    border: 1px solid rgba(27, 21, 52, 0.12);
+}
+
+.detail-card__body {
+    display: grid;
+    gap: 8px;
 }
 
 .detail-card h3 {
