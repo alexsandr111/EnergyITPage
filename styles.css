@@ -118,8 +118,36 @@ img {
     font-size: 18px;
 }
 
+.hero__lead--faded-line {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__lead--faded-line::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 110%;
+    margin-top: 1cm;
+    margin-left: -5%;
+    background: linear-gradient(90deg, transparent, currentColor 45%, currentColor 55%, transparent);
+}
+
 .hero-info .hero__lead {
     color: var(--text);
+}
+
+.hero-info .hero__link {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.hero-info .hero__link:hover {
+    color: var(--accent);
 }
 
 .hero__link {
