@@ -25,8 +25,8 @@ img {
 }
 
 .container {
-    width: 90%;
-    max-width: 1140px;
+    width: 96%;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -84,10 +84,17 @@ img {
     min-height: 360px;
 }
 
+.hero--centered {
+    background: linear-gradient(135deg, rgba(27, 21, 52, 0.9), rgba(12, 32, 86, 0.78)),
+                url('https://static.tildacdn.com/tild6162-3836-4433-b130-316362393733/photo.jpg') center/cover no-repeat;
+    justify-content: center;
+    min-height: clamp(420px, 62vh, 560px);
+}
+
 .hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, rgba(27, 21, 52, 0.85), rgba(27, 21, 52, 0.7));
+    background: linear-gradient(120deg, rgba(5, 10, 30, 0.7), rgba(10, 20, 58, 0.82));
 }
 
 .hero__content {
@@ -96,19 +103,46 @@ img {
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    padding: 30px 0 40px;
+    gap: 14px;
+    padding: 0;
+    justify-content: center;
+}
+
+.t891__wrapper {
+    justify-content: center;
 }
 
 .hero--centered .hero__content {
     text-align: center;
     align-items: center;
+    max-width: 1080px;
 }
 
 .hero__content h1 {
-    font-size: 42px;
+    font-size: clamp(38px, 5.3vw, 62px);
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+
+.hero__content h1 span {
+    display: block;
+}
+
+.t891__title {
+    text-align: center;
+}
+
+.t-title {
+    margin: 0;
+}
+
+.t-title_xl {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.12;
+    font-weight: 800;
 }
 
 .hero__lead {
@@ -116,12 +150,14 @@ img {
     margin: 0;
     color: rgba(255, 255, 255, 0.92);
     font-size: 18px;
+    line-height: 1.45;
 }
 
 .hero-info .hero__lead {
     color: var(--text);
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.45;
 }
 
 .hero__link {
@@ -142,26 +178,107 @@ img {
     text-underline-offset: 3px;
 }
 
-.hero-info {
-    background: #ffffff;
-    padding: 26px 0 14px;
+.intro-block {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(120deg, rgba(12, 12, 40, 0.85), rgba(12, 32, 86, 0.8)),
+                radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.08), transparent 32%),
+                radial-gradient(circle at 78% 12%, rgba(255, 255, 255, 0.14), transparent 36%),
+                url('https://static.tildacdn.com/tild6162-3836-4433-b130-316362393733/photo.jpg') center/cover no-repeat;
+    padding: clamp(56px, 8vw, 92px) 20px;
+    min-height: clamp(320px, 50vh, 440px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    overflow: hidden;
 }
 
-.hero-info__content {
-    display: grid;
-    gap: 12px;
+.intro-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(5, 10, 30, 0.72), rgba(10, 20, 58, 0.76));
+    pointer-events: none;
+}
+
+.intro-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    padding-bottom: 18px;
+    display: grid;
+    gap: 10px;
 }
 
-.hero-info__content::after {
-    content: "";
+.intro-title {
+    font-size: clamp(42px, 5.4vw, 68px);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 6px;
+    line-height: 1.08;
+    letter-spacing: 0.2px;
+    text-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+
+.intro-text {
+    font-size: clamp(18px, 2vw, 20px);
+    color: #ffffff;
+    max-width: 1180px;
+    margin: 0 auto 10px auto;
+    line-height: 1.5;
+}
+
+.intro-text a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.intro-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff33;
+    margin-top: clamp(26px, 5vw, 40px);
+}
+
+.intro-info {
+    padding: 40px 20px 50px;
+    background: #ffffff;
+}
+
+.intro-text--narrow {
+    max-width: 1180px;
+    color: var(--text);
+    line-height: 1.55;
+    font-size: clamp(17px, 1.9vw, 20px);
+}
+
+.intro-text--contact a {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.intro-underline {
     display: block;
+    width: 100%;
+    max-width: 1180px;
     height: 2px;
-    width: min(640px, 100%);
-    margin: 18px auto 0;
-    background: linear-gradient(90deg, rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.55) 18%, rgba(31, 31, 31, 0.55) 82%, rgba(31, 31, 31, 0));
+    margin: 10px auto 0;
+    background: linear-gradient(90deg,
+            rgba(31, 31, 31, 0),
+            rgba(31, 31, 31, 0.35) 14%,
+            rgba(31, 31, 31, 0.65) 50%,
+            rgba(31, 31, 31, 0.35) 86%,
+            rgba(31, 31, 31, 0));
     border-radius: 999px;
+}
+
+.intro-divider--light {
+    background-color: #dcdce5;
+    margin-top: 34px;
 }
 
 .hero__actions {
