@@ -118,23 +118,6 @@ img {
     font-size: 18px;
 }
 
-.hero__lead--faded-line {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero__lead--faded-line::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 140%;
-    margin: 18px auto 0;
-    background: linear-gradient(90deg, transparent, rgba(31, 31, 31, 0.4), transparent);
-}
-
 .hero-info .hero__lead {
     color: var(--text);
 }
@@ -149,6 +132,14 @@ img {
     opacity: 0.8;
 }
 
+.hero__link--underline {
+    color: var(--text);
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
 .hero-info {
     background: #ffffff;
     padding: 26px 0 14px;
@@ -158,6 +149,17 @@ img {
     display: grid;
     gap: 12px;
     text-align: center;
+    padding-bottom: 18px;
+}
+
+.hero-info__content::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 240px;
+    margin: 18px auto 0;
+    background: rgba(31, 31, 31, 0.55);
+    border-radius: 999px;
 }
 
 .hero__actions {
