@@ -118,6 +118,23 @@ img {
     font-size: 18px;
 }
 
+.hero__lead--faded-line {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__lead--faded-line::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin-top: 1cm;
+    background: linear-gradient(90deg, transparent, rgba(31, 31, 31, 0.4), transparent);
+}
+
 .hero-info .hero__lead {
     color: var(--text);
 }
