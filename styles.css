@@ -130,8 +130,8 @@ img {
     content: "";
     display: block;
     height: 1px;
-    width: 100%;
-    margin-top: 1cm;
+    width: 140%;
+    margin: 18px auto 0;
     background: linear-gradient(90deg, transparent, rgba(31, 31, 31, 0.4), transparent);
 }
 
@@ -140,8 +140,9 @@ img {
 }
 
 .hero__link {
-    color: #fff;
+    color: var(--accent);
     font-weight: 700;
+    text-decoration: underline;
 }
 
 .hero__link:hover {
